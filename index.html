@@ -4,107 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Dashboard</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="./src/login.css">
 </head>
 
 <body>
-    <h1>Employee Management System</h1>
-    <div class="container">
-        <table id="employee-table">
+    <header class="header">
+        <div class="logo">Login Page</div>
 
-        </table>
-        <form class="filter-wrap">
-            <h5>Filter by</h5>
-            <div class="field-wrap">
-                <label for="id">Id</label>
-                <input type="number" id="id">
+    </header>
+
+    <div class="login-container">
+        <form id="login-form" class="login-form">
+            <h1>Welcome Back</h1>
+            <p>Please log in to your account</p>
+            <div class="form-group">
+                <label for="uname">Username</label>
+                <input type="text" id="uname" name="uname" placeholder="Enter your username" required>
             </div>
-            <div class="field-wrap">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
-            <div class="field-wrap">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname">
-            </div>
-            <div class="field-wrap">
-                <label for="dob">Date of birth</label>
-                <input type="date" id="dob">
-            </div>
-            <div class="field-wrap">
-                <label for="doj">Date of Joining</label>
-                <input type="date" id="doj">
-            </div>
-            <div class="field-wrap">
-                <label for="grades">Grade</label>
-                <select id="grades">
-                    <option value="select-defualt">-- select --</option>
-                    <option value="m1">M1</option>
-                    <option value="m2">M2</option>
-                    <option value="m3">M3</option>
-                </select>
-            </div>
-            <div class="filter-buttons">
-                <button id="reset">Reset</button>
-                <button id="filter">Filter</button>
-            </div>
+            <button type="submit" class="btn-submit">LogIn</button>
+            <p id="error-message" class="hidden">Invalid username or password. Please try again.</p>
         </form>
-        <div id="view-modal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <span class="close" id="close-view"><i class="fa-solid fa-x"></i></span>
-                <h3>Employee Details</h3>
-                <div class="view-details" id="view-details"></div>
-            </div>
-        </div>
-        <div id="modal-overlay" class="modal-overlay"></div>
-
-        <div id="update-modal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <span class="close" id="close-update"><i class="fa-solid fa-x"></i></span>
-                <h3>Update Employee Details</h3>
-                <form id="update-form" class="update-details">
-                    <div class="field-wrap">
-                        <label for="update-id">Id</label>
-                        <input type="text" id="update-id" disabled>
-                    </div>
-                    <div class="multifield-wrap">
-                        <div class="field-wrap">
-                            <label for="update-fname">First Name</label>
-                            <input type="text" id="update-fname">
-                        </div>
-                        <div class="field-wrap">
-                            <label for="update-lname">Last Name</label>
-                            <input type="text" id="update-lname">
-                        </div>
-                    </div>
-                    <div class="multifield-wrap">
-                        <div class="field-wrap">
-                            <label for="update-dob">Date of Birth</label>
-                            <input type="date" id="update-dob">
-                        </div>
-                        <div class="field-wrap">
-                            <label for="update-doj">Date of Joining</label>
-                            <input type="date" id="update-doj">
-                        </div>
-                    </div>
-
-                    <div class="field-wrap">
-                        <label for="update-grade">Grade</label>
-                        <select id="update-grade">
-                            <option value="M1">M1</option>
-                            <option value="M2">M2</option>
-                            <option value="M3">M3</option>
-                        </select>
-                    </div>
-                    <button type="submit">Update</button>
-                </form>
-            </div>
-        </div>
-
-        <script type="module" src="./src/index.js">
-        </script>
-        <script src="https://kit.fontawesome.com/6514f15526.js" crossorigin="anonymous"></script>
-
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+    <script src="./src/login.js"></script>
 </body>
 
 </html>

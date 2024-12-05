@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Dashboard</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <div class="container">
+        <div class="table-wrap">
+            <table id="employee-table">
+
+            </table>
+        </div>
+
+        <form class="filter-wrap">
+            <h5>Filter by</h5>
+            <div class="field-wrap">
+                <label for="id">ID</label>
+                <input type="number" id="id">
+            </div>
+            <div class="field-wrap">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname">
+            </div>
+            <div class="field-wrap">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname">
+            </div>
+            <div class="field-wrap">
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob">
+            </div>
+            <div class="field-wrap">
+                <label for="doj">Date of Joining</label>
+                <input type="date" id="doj">
+            </div>
+            <div class="field-wrap">
+                <label for="grades">Grade</label>
+                <select id="grades">
+                    <option value="select-defualt">-- select --</option>
+                    <option value="m1">M1</option>
+                    <option value="m2">M2</option>
+                    <option value="m3">M3</option>
+                </select>
+            </div>
+            <div class="filter-buttons">
+                <button id="reset">Reset</button>
+                <button id="filter">Filter</button>
+            </div>
+            <p class="error-message hidden">At least one field is required for filtering.</p>
+        </form>
+        <div id="view-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" id="close-view"><i class="fa-solid fa-x"></i></span>
+                <h3>Employee Details</h3>
+                <div class="view-details" id="view-details"></div>
+            </div>
+        </div>
+        <div id="modal-overlay" class="modal-overlay"></div>
+
+        <div id="update-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" id="close-update"><i class="fa-solid fa-x"></i></span>
+                <h3>Update Employee Details</h3>
+                <form id="update-form" class="update-details">
+                    <div class="field-wrap">
+                        <label for="update-id">ID</label>
+                        <input type="text" id="update-id" disabled>
+                    </div>
+                    <div class="multifield-wrap">
+                        <div class="field-wrap">
+                            <label for="update-fname">First Name</label>
+                            <input type="text" id="update-fname">
+                        </div>
+                        <div class="field-wrap">
+                            <label for="update-lname">Last Name</label>
+                            <input type="text" id="update-lname">
+                        </div>
+                    </div>
+                    <div class="multifield-wrap">
+                        <div class="field-wrap">
+                            <label for="update-dob">Date of Birth</label>
+                            <input type="date" id="update-dob">
+                        </div>
+                        <div class="field-wrap">
+                            <label for="update-doj">Date of Joining</label>
+                            <input type="date" id="update-doj">
+                        </div>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label for="update-grade">Grade</label>
+                        <select id="update-grade">
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                            <option value="M3">M3</option>
+                        </select>
+                    </div>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./dashboard.js">
+    </script>
+    <script src="https://kit.fontawesome.com/6514f15526.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
